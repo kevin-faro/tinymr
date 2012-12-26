@@ -14,9 +14,9 @@ Run It
 
 Result
 ------
-```bye	1
+bye	1
 goodbye	1
-hello	2
+hello	1
 tinymr	2
-world	2```
+world	2
 
