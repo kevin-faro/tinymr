@@ -9,14 +9,14 @@ This was written to demonstrate the Map/Reduce approach to my team without havin
 
 Run It
 ------
-'''cat text.txt | python wordcount.py'''	
+```cat text.txt | python wordcount.py```	
 
 
 Result
 ------
-'''bye	1
+```bye	1
 goodbye	1
 hello	2
 tinymr	2
-world	2'''
+world	2```
 
