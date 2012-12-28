@@ -13,8 +13,8 @@ class MapRed:
         """runs a mapred job"""
 
         import sys
-        from .Context import MContext
-        from .Context import RContext
+        from .context import MContext
+        from .context import RContext
         import string
         #input
         lines = sys.stdin.readlines()

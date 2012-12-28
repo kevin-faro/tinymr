@@ -1,5 +1,5 @@
-from tinymr import MapRed
-from tinymr import Context
+from tinymr import mapred
+from tinymr import context
 import string
 import sys
 
@@ -14,4 +14,4 @@ def reducer(key, values, context):
     context.emit(key, sum)
 
 if __name__ == "__main__":
-    MapRed.MapRed.run(mapper, reducer)
+    mapred.MapRed.run(mapper, reducer)

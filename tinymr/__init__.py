@@ -1,3 +1,3 @@
-__all__ = ["MapRed", "Context"]
-import MapRed
-import Context
+__all__ = ["mapred", "context"]
+import mapred
+import context
