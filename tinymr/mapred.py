@@ -1,15 +1,23 @@
 class MapRed:
-    
-
     def identity_reducer(key, values, context):
         """just emits the key/value pairs"""
 
         for value in values:
             context.emit(key, value)
     #end identity_reducer
-           
+
+    def default_output(key, value):
+        """print tab delimited key and value"""
+
+        if key is None:
+            print(str(value))
+        elif value is None:
+            print(str(key))
+        else:
+            print(str(key) + '\t' + str(value))
+
     @staticmethod 
-    def run(mapper, reducer=identity_reducer):
+    def run(mapper, reducer=identity_reducer, output=default_output):
         """runs a mapred job"""
 
         import sys
@@ -34,12 +42,7 @@ class MapRed:
             reducer(key, values, reduce_context)
         #output
         for entry in reduce_context.data():
-            if entry[0] is None:
-                print(str(entry[1]))
-	    elif entry[1] is None:
-		print(str(entry[0]))
-            else:
-                print(str(entry[0]) + '\t' + str(entry[1]))
+            output(entry[0], entry[1])
     #end run
 #end mapred
 if __name__ == "__main__":
